@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{727C01E9-F7D8-434D-9FDC-677A5AF7ACCF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Financial_Advisor</RootNamespace>
+    <AssemblyName>Financial Advisor</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Valuation\evEbitdaRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Valuation\evEbitdaRatio.Designer.cs">
+      <DependentUpon>evEbitdaRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Valuation\evEbitRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Valuation\evEbitRatio.Designer.cs">
+      <DependentUpon>evEbitRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Valuation\evRevenueRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Valuation\evRevenueRatio.Designer.cs">
+      <DependentUpon>evRevenueRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidity\capexToOperatingCashRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidity\capexToOperatingCashRatio.Designer.cs">
+      <DependentUpon>capexToOperatingCashRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidity\cashRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidity\cashRatio.Designer.cs">
+      <DependentUpon>cashRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidity\currentRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidity\currentRatio.Designer.cs">
+      <DependentUpon>currentRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidity\defensiveIntervalRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidity\defensiveIntervalRatio.Designer.cs">
+      <DependentUpon>defensiveIntervalRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Efficiency\accountsReceivableDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Efficiency\accountsReceivableDays.Designer.cs">
+      <DependentUpon>accountsReceivableDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Efficiency\accountsReceivableTurnoverRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Efficiency\accountsReceivableTurnoverRatio.Designer.cs">
+      <DependentUpon>accountsReceivableTurnoverRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Efficiency\assetTurnoverRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Efficiency\assetTurnoverRatio.Designer.cs">
+      <DependentUpon>assetTurnoverRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Efficiency\inventoryTurnoverDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Efficiency\inventoryTurnoverDays.Designer.cs">
+      <DependentUpon>inventoryTurnoverDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Efficiency\inventoryTurnoverRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Efficiency\inventoryTurnoverRatio.Designer.cs">
+      <DependentUpon>inventoryTurnoverRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leverage\debtRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leverage\debtRatio.Designer.cs">
+      <DependentUpon>debtRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leverage\debtToEquityRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leverage\debtToEquityRatio.Designer.cs">
+      <DependentUpon>debtToEquityRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leverage\equityRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leverage\equityRatio.Designer.cs">
+      <DependentUpon>equityRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidity\operatingCashFlowRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidity\operatingCashFlowRatio.Designer.cs">
+      <DependentUpon>operatingCashFlowRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Valuation\priceToEarningsRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Valuation\priceToEarningsRatio.Designer.cs">
+      <DependentUpon>priceToEarningsRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\netProfitMargin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\netProfitMargin.Designer.cs">
+      <DependentUpon>netProfitMargin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\operatingProfitMargin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\operatingProfitMargin.Designer.cs">
+      <DependentUpon>operatingProfitMargin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\grossMarginRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\grossMarginRatio.Designer.cs">
+      <DependentUpon>grossMarginRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\returnOnEquity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\returnOnEquity.Designer.cs">
+      <DependentUpon>returnOnEquity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\Profitability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\Profitability.Designer.cs">
+      <DependentUpon>Profitability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leverage\Leverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leverage\Leverage.Designer.cs">
+      <DependentUpon>Leverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Efficiency\Efficiency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Efficiency\Efficiency.Designer.cs">
+      <DependentUpon>Efficiency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidity\Liquidity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidity\Liquidity.Designer.cs">
+      <DependentUpon>Liquidity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\returnOnAssets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\returnOnAssets.Designer.cs">
+      <DependentUpon>returnOnAssets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profitability\returnOnCapitalEmployed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profitability\returnOnCapitalEmployed.Designer.cs">
+      <DependentUpon>returnOnCapitalEmployed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidity\quickRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidity\quickRatio.Designer.cs">
+      <DependentUpon>quickRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidity\timesInterestEarned_CashBasis_Ratio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidity\timesInterestEarned_CashBasis_Ratio.Designer.cs">
+      <DependentUpon>timesInterestEarned_CashBasis_Ratio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidity\timesInterestEarnedRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidity\timesInterestEarnedRatio.Designer.cs">
+      <DependentUpon>timesInterestEarnedRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Valuation\Valuation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Valuation\Valuation.Designer.cs">
+      <DependentUpon>Valuation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Efficiency\accountsReceivableDays.resx">
+      <DependentUpon>accountsReceivableDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Efficiency\accountsReceivableTurnoverRatio.resx">
+      <DependentUpon>accountsReceivableTurnoverRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Efficiency\assetTurnoverRatio.resx">
+      <DependentUpon>assetTurnoverRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Efficiency\inventoryTurnoverDays.resx">
+      <DependentUpon>inventoryTurnoverDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Efficiency\inventoryTurnoverRatio.resx">
+      <DependentUpon>inventoryTurnoverRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leverage\debtRatio.resx">
+      <DependentUpon>debtRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leverage\debtToEquityRatio.resx">
+      <DependentUpon>debtToEquityRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leverage\equityRatio.resx">
+      <DependentUpon>equityRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidity\capexToOperatingCashRatio.resx">
+      <DependentUpon>capexToOperatingCashRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidity\cashRatio.resx">
+      <DependentUpon>cashRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidity\currentRatio.resx">
+      <DependentUpon>currentRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidity\defensiveIntervalRatio.resx">
+      <DependentUpon>defensiveIntervalRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidity\operatingCashFlowRatio.resx">
+      <DependentUpon>operatingCashFlowRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidity\quickRatio.resx">
+      <DependentUpon>quickRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidity\timesInterestEarnedRatio.resx">
+      <DependentUpon>timesInterestEarnedRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidity\timesInterestEarned_CashBasis_Ratio.resx">
+      <DependentUpon>timesInterestEarned_CashBasis_Ratio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\grossMarginRatio.resx">
+      <DependentUpon>grossMarginRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\netProfitMargin.resx">
+      <DependentUpon>netProfitMargin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\operatingProfitMargin.resx">
+      <DependentUpon>operatingProfitMargin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\returnOnAssets.resx">
+      <DependentUpon>returnOnAssets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\returnOnCapitalEmployed.resx">
+      <DependentUpon>returnOnCapitalEmployed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\returnOnEquity.resx">
+      <DependentUpon>returnOnEquity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profitability\Profitability.resx">
+      <DependentUpon>Profitability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leverage\Leverage.resx">
+      <DependentUpon>Leverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Efficiency\Efficiency.resx">
+      <DependentUpon>Efficiency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidity\Liquidity.resx">
+      <DependentUpon>Liquidity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Valuation\evEbitdaRatio.resx">
+      <DependentUpon>evEbitdaRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Valuation\evEbitRatio.resx">
+      <DependentUpon>evEbitRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Valuation\evRevenueRatio.resx">
+      <DependentUpon>evRevenueRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Valuation\priceToEarningsRatio.resx">
+      <DependentUpon>priceToEarningsRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Valuation\Valuation.resx">
+      <DependentUpon>Valuation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
